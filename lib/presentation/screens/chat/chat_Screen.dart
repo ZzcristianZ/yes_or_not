@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:yes_or_no/domain/entities/message.dart';
+import 'package:yes_or_no/infractructure/models/yes_no_model.dart';
 import 'package:yes_or_no/presentation/providers/chat_provider.dart';
 import 'package:yes_or_no/presentation/widgets/chat/her_menssage_bubble.dart';
 import 'package:yes_or_no/presentation/widgets/chat/my_message_buuble.dart'; 
@@ -49,7 +50,7 @@ class _ChatView extends StatelessWidget {
                   final message = chatProvider.messageList[index];
 
                   return(message.fromWho == FromWho.hers)
-                    ?HerMenssageBubble()
+                    ?HerMenssageBubble(message: message)
                     :MyMessageBuuble(message: message);
                 },
               )

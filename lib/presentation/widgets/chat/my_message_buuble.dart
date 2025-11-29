@@ -5,10 +5,7 @@ class MyMessageBuuble extends StatelessWidget {
   
   final Message message;
 
-   const MyMessageBuuble( {
-    super.key,
-    required this.message
-   });
+   const MyMessageBuuble( {super.key,required this.message});
 
 
   
